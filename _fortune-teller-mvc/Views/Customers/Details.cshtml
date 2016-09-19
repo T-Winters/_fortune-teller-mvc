@@ -1,0 +1,70 @@
+﻿@model _fortune_teller_mvc.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSiblings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSiblings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthMonth.BirthMonth1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthMonth.BirthMonth1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color.FavoriteColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color.FavoriteColor)
+        </dd>
+
+    </dl>
+</div>
+<h4>Customer</h4>
+<hr />
+<div>
+    @Model.FirstName @Model.LastName will retire in @ViewBag.NumberOfYears years with $@ViewBag.AmountOfMoney in the bank, a vacation home in @ViewBag.Location and a @ViewBag.Transportation to get around.
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CusotmerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
